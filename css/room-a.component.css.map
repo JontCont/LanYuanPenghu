@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/app/room/room-a/room-a.component.scss"
+    ],
+    "names": [],
+    "file": "room-a.component.css"
+}
