@@ -1,4 +1,7 @@
+using Dapper;
+using lanyuanApi.DbContext;
 using Microsoft.AspNetCore.Mvc;
+using System.Data.Odbc;
 
 namespace lanyuanApi.Controllers
 {
@@ -9,7 +12,7 @@ namespace lanyuanApi.Controllers
         private static readonly string[] Summaries = new[]
         {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
+        };
 
         private readonly ILogger<WeatherForecastController> _logger;
 
@@ -21,6 +24,8 @@ namespace lanyuanApi.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
+           var data =  new AccessContextcs().InformationData();
+
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
