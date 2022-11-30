@@ -1,14 +1,16 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+
 var builder = WebApplication.CreateBuilder(args);
-
+var Configuration = new ConfigurationBuilder()
+                      .SetBasePath(Directory.GetCurrentDirectory())
+                      .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                      .Build();
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
-
-//add core content
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(
@@ -26,68 +28,72 @@ builder.Services.AddCors(options =>
         });
 });
 
-builder.Services
-    .AddAuthentication(options =>
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    //options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    // ·íÅçÃÒ¥¢±Ñ®É¡A¦^À³¼ĞÀY·|¥]§t WWW-Authenticate ¼ĞÀY¡A³o¸Ì·|Åã¥Ü¥¢±Ñªº¸Ô²Ó¿ù»~­ì¦]
+    options.IncludeErrorDetails = true; // ¹w³]­È¬° true¡A¦³®É·|¯S§OÃö³¬
+
+    options.TokenValidationParameters = new TokenValidationParameters
     {
-        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-        options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-        //options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
-    })
-    .AddJwtBearer(options =>
+        // ³z¹L³o¶µ«Å§i¡A´N¥i¥H±q "sub" ¨ú­È¨Ã³]©wµ¹ User.Identity.Name
+        NameClaimType = "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier",
+        // ³z¹L³o¶µ«Å§i¡A´N¥i¥H±q "roles" ¨ú­È¡A¨Ã¥iÅı [Authorize] §PÂ_¨¤¦â
+        RoleClaimType = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
+
+        // ¤@¯ë§Ú­Ì³£·|ÅçÃÒ Issuer
+        ValidateIssuer = true,
+        ValidIssuer = Configuration.GetValue<string>("JwtSettings:Issuer"),
+
+        // ³q±`¤£¤Ó»İ­nÅçÃÒ Audience
+        ValidateAudience = false,
+        //ValidAudience = "JwtAuthDemo", // ¤£ÅçÃÒ´N¤£»İ­n¶ñ¼g
+
+        // ¤@¯ë§Ú­Ì³£·|ÅçÃÒ Token ªº¦³®Ä´Á¶¡
+        ValidateLifetime = true,
+
+        // ¦pªG Token ¤¤¥]§t key ¤~»İ­nÅçÃÒ¡A¤@¯ë³£¥u¦³Ã±³¹¦Ó¤w
+        ValidateIssuerSigningKey = false,
+
+        // "1234567890123456" À³¸Ó±q IConfiguration ¨ú±o
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration.GetValue<string>("JwtSettings:SignKey")))
+    };
+    options.Events = new JwtBearerEvents
     {
-        // ç•¶é©—è­‰å¤±æ•—æ™‚ï¼Œå›æ‡‰æ¨™é ­æœƒåŒ…å« WWW-Authenticate æ¨™é ­ï¼Œé€™è£¡æœƒé¡¯ç¤ºå¤±æ•—çš„è©³ç´°éŒ¯èª¤åŸå› 
-        options.IncludeErrorDetails = true; // é è¨­å€¼ç‚º trueï¼Œæœ‰æ™‚æœƒç‰¹åˆ¥é—œé–‰
-
-        options.TokenValidationParameters = new TokenValidationParameters
+        OnMessageReceived = context =>
         {
-            // é€éé€™é …å®£å‘Šï¼Œå°±å¯ä»¥å¾ "sub" å–å€¼ä¸¦è¨­å®šçµ¦ User.Identity.Name
-            NameClaimType = "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier",
-            // é€éé€™é …å®£å‘Šï¼Œå°±å¯ä»¥å¾ "roles" å–å€¼ï¼Œä¸¦å¯è®“ [Authorize] åˆ¤æ–·è§’è‰²
-            RoleClaimType = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
+            var accessToken = context.Request.Cookies["x-access-token"];
 
-            // ä¸€èˆ¬æˆ‘å€‘éƒ½æœƒé©—è­‰ Issuer
-            ValidateIssuer = true,
-            ValidIssuer = Configuration.GetValue<string>("JwtSettings:Issuer"),
-
-            // é€šå¸¸ä¸å¤ªéœ€è¦é©—è­‰ Audience
-            ValidateAudience = false,
-            //ValidAudience = "JwtAuthDemo", // ä¸é©—è­‰å°±ä¸éœ€è¦å¡«å¯«
-
-            // ä¸€èˆ¬æˆ‘å€‘éƒ½æœƒé©—è­‰ Token çš„æœ‰æ•ˆæœŸé–“
-            ValidateLifetime = true,
-
-            // å¦‚æœ Token ä¸­åŒ…å« key æ‰éœ€è¦é©—è­‰ï¼Œä¸€èˆ¬éƒ½åªæœ‰ç°½ç« è€Œå·²
-            ValidateIssuerSigningKey = false,
-
-            // "1234567890123456" æ‡‰è©²å¾ IConfiguration å–å¾—
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration.GetValue<string>("JwtSettings:SignKey")))
-        };
-        options.Events = new JwtBearerEvents
-        {
-            OnMessageReceived = context =>
+            if (!string.IsNullOrEmpty(accessToken))
             {
-                var accessToken = context.Request.Cookies["x-access-token"];
-
-                if (!string.IsNullOrEmpty(accessToken))
-                {
-                    context.Token = accessToken;
-                }
-
-                return Task.CompletedTask;
+                context.Token = accessToken;
             }
-        };
-    })
-    .AddCookie(options =>
-    {
-        options.EventsType = typeof(CookieAuthenticationEventsExetensions);
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(1);
-        options.Cookie.Name = "user-session";
-        options.SlidingExpiration = true;
-    });
+
+            return Task.CompletedTask;
+        }
+    };
+})
+.AddCookie(options =>
+{
+    options.EventsType = typeof(CookieAuthenticationEventsExetensions);
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(1);
+    options.Cookie.Name = "user-session";
+    options.SlidingExpiration = true;
+});
+
+
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 
 
 var app = builder.Build();
-
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

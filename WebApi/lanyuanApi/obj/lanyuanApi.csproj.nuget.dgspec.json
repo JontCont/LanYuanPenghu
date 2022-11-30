@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Git\\Github\\00_Source\\ng-homestay\\WebApi\\lanyuanApi\\lanyuanApi.csproj": {}
+    "D:\\Git\\Github\\00_Source\\ng-homestay\\WebApi\\lanyuanApi\\lanyuanApi.csproj": {}
   },
   "projects": {
-    "d:\\Git\\Github\\00_Source\\ng-homestay\\WebApi\\lanyuanApi\\lanyuanApi.csproj": {
+    "D:\\Git\\Github\\00_Source\\ng-homestay\\WebApi\\lanyuanApi\\lanyuanApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Git\\Github\\00_Source\\ng-homestay\\WebApi\\lanyuanApi\\lanyuanApi.csproj",
+        "projectUniqueName": "D:\\Git\\Github\\00_Source\\ng-homestay\\WebApi\\lanyuanApi\\lanyuanApi.csproj",
         "projectName": "lanyuanApi",
-        "projectPath": "d:\\Git\\Github\\00_Source\\ng-homestay\\WebApi\\lanyuanApi\\lanyuanApi.csproj",
+        "projectPath": "D:\\Git\\Github\\00_Source\\ng-homestay\\WebApi\\lanyuanApi\\lanyuanApi.csproj",
         "packagesPath": "C:\\Users\\JCont\\.nuget\\packages\\",
-        "outputPath": "d:\\Git\\Github\\00_Source\\ng-homestay\\WebApi\\lanyuanApi\\obj\\",
+        "outputPath": "D:\\Git\\Github\\00_Source\\ng-homestay\\WebApi\\lanyuanApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,15 +22,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -41,16 +41,24 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[6.0.11, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.15.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.2.3, )"
             }
           },
           "imports": [
@@ -72,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
