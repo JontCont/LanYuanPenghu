@@ -8,28 +8,8 @@ import { RoomBComponent } from './room-b/room-b.component';
 import { RoomCComponent } from './room-c/room-c.component';
 import { RoomMenuComponent } from './room-menu/room-menu.component';
 
-const routes: Routes = [
-  {
-    path: '',
-    component: RoomMenuComponent,
-    children: [
-      { path: '', pathMatch: 'full', redirectTo: 'room-menu' },
-      {
-        path: 'room-a',
-        component: RoomAComponent,
-      },
-      {
-        path: 'room-b',
-        component: RoomBComponent,
-      },
-      {
-        path: 'room-c',
-        component: RoomCComponent,
-      },
-      { path: '**', redirectTo: 'room-menu', pathMatch: 'full' },
-    ]
-  }
-];
+
+const routes: Routes = [];
 
 @NgModule({
   declarations: [
@@ -40,7 +20,7 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RoomRoutingModule
   ],
   exports: [RouterModule]
 })
