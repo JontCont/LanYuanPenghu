@@ -8,11 +8,11 @@ namespace lanyuanApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class InformationController : ControllerBase
+    public class BasicUserAccessController : ControllerBase
     {
-        private readonly ILogger<InformationController> _logger;
+        private readonly ILogger<BasicUserAccessController> _logger;
 
-        public InformationController(ILogger<InformationController> logger)
+        public BasicUserAccessController(ILogger<BasicUserAccessController> logger)
         {
             _logger = logger;
         }

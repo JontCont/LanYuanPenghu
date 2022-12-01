@@ -20,5 +20,20 @@ namespace lanyuanApi.DbContext
             return data.AsEnumerable();
         }
 
+        public IEnumerable<BasicUserAccess> BasicUserAccessonData()
+        {
+            var queryText = "SELECT * FROM BasicUserAccess";
+            var data = Connection.Query<BasicUserAccess>(queryText);
+            return data.AsEnumerable();
+        }
+        public IEnumerable<Introduction> IntroductionData()
+        {
+            var queryText = "SELECT * FROM Introduction";
+            var data = Connection.Query<Introduction>(queryText);
+            return data.AsEnumerable();
+        }
+
+
+
     }
 }
