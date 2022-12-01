@@ -1,0 +1,125 @@
+.carousel {
+  border: 1px solid red;
+  height: 600px;
+  background-image: url("https://i.picsum.photos/id/57/2448/3264.jpg?hmac=ewraXYesC6HuSEAJsg3Q80bXd1GyJTxekI05Xt9YjfQ");
+  background-size: cover;
+}
+
+.info {
+  height: 750px;
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns:
+    [start col-a] 50% [col-b] 50% [stop end last];
+  grid-template-rows:
+    [start header] 50% [content] 50% [stop end];
+
+  .info_img1 {
+    background-image: url("https://i.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68");
+    background-size: cover;
+  }
+
+  .info_img2 {
+    background-image: url("https://i.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68");
+    background-size: cover;
+  }
+
+  .info_text {
+    background-color: #F8FAFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .info_inline {
+      text-align: center;
+      width: 100%;
+
+      &>p {
+        font-size: 28px;
+        font-weight: bolder;
+        margin-bottom: 15px;
+        color: #353866;
+      }
+
+      button {
+        background-color: #CBA6C3;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        width: 150px;
+        height: 45px;
+        cursor: pointer;
+
+        &>p {
+          color: #F8FAFF;
+          font-size: 24px;
+          font-weight: bolder;
+        }
+
+        &:hover {
+          background-color: #353866;
+        }
+      }
+    }
+  }
+}
+
+.map {
+  height: 600px;
+  margin: 2rem;
+
+  .map_title {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    color: #353866;
+    font-weight: bolder;
+    margin-top: 40px;
+  }
+
+  .map_block {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 3rem auto;
+
+    .map_info {
+      &>p {
+        font-size: 20px;
+        color: #353866;
+        padding-left: 15px;
+      }
+
+      &>h2 {
+        color: #353866;
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
+.rooms {
+  height: 450px;
+
+  .rooms_title {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    color: #353866;
+    font-weight: bolder;
+    margin: 3rem 0;
+  }
+
+  .rooms_block {
+    display: flex;
+    justify-content: center;
+
+    .rooms_info {
+      width: 70%;
+      height: 300px;
+      background-image: url("https://i.picsum.photos/id/57/2448/3264.jpg?hmac=ewraXYesC6HuSEAJsg3Q80bXd1GyJTxekI05Xt9YjfQ");
+      background-size: cover;
+    }
+  }
+}
