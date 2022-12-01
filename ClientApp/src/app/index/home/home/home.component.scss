@@ -72,15 +72,6 @@
   height: 600px;
   margin: 2rem;
 
-  .map_title {
-    width: 100%;
-    text-align: center;
-    font-size: 28px;
-    color: #353866;
-    font-weight: bolder;
-    margin-top: 40px;
-  }
-
   .map_block {
     display: flex;
     align-items: center;
@@ -104,15 +95,6 @@
 
 .rooms {
   height: 450px;
-
-  .rooms_title {
-    width: 100%;
-    text-align: center;
-    font-size: 28px;
-    color: #353866;
-    font-weight: bolder;
-    margin: 3rem 0;
-  }
 
   .rooms_block {
     display: flex;
