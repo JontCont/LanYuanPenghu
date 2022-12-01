@@ -1,0 +1,58 @@
+.room_img {
+  height: 500px;
+  background-image: url("https://i.picsum.photos/id/445/4256/2819.jpg?hmac=99qT1IPidZrzaXTgG1ixRRVwElWXUlNepU2k692G44c");
+  background-position: center center;
+  background-size: cover;
+
+  &>p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #F8FAFF;
+    font-size: 28px;
+    font-weight: bolder;
+  }
+}
+
+.room_list {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+
+  .room_list_block {
+    border-radius: 5px;
+    height: 200px;
+    position: relative;
+    margin-bottom: 25px;
+
+    .room_list_text {
+      position: absolute;
+      background-color: #F8FAFF;
+      width: 20%;
+
+      p {
+        color: #353866;
+      }
+    }
+
+    .room_list_title {
+      border-radius: 5px;
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+
+      >img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .room_list_btn {
+      position: absolute;
+      right: 0;
+      top: 75%;
+    }
+  }
+}

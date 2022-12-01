@@ -23,3 +23,23 @@ li {
   font-weight: bolder;
   margin: 3rem 0;
 }
+
+.ly_btn {
+  background-color: #CBA6C3;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  width: 150px;
+  height: 45px;
+  cursor: pointer;
+
+  &>p {
+    color: #F8FAFF;
+    font-size: 24px;
+    font-weight: bolder;
+  }
+
+  &:hover {
+    background-color: #353866;
+  }
+}
