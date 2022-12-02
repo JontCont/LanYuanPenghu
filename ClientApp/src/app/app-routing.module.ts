@@ -23,6 +23,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./room/room.module').then((m) => m.RoomModule),
   },
+  {
+    path: 'photo',
+    loadChildren: () =>
+      import('./photo/photo.module').then((m) => m.PhotoModule),
+  },
   { path: '**', component: HomeComponent, },
 ];
 
