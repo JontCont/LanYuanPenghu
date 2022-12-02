@@ -6,6 +6,29 @@
   padding: 0;
   box-sizing: border-box;
 }
+// append scrollbar style
+* {
+  ::-webkit-scrollbar {
+    display: inline-block;
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background-color: rgb(240, 240, 240);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ccc;
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    background-color: #eee;
+  }
+
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+}
 
 body {
   box-sizing: border-box;
