@@ -1,8 +1,9 @@
 .about_img {
   height: 500px;
-  background-image: url("https://i.picsum.photos/id/163/2000/1333.jpg?hmac=htdHeSJwlYOxS8b0TTpz2s8tD_QDlmsd3JHYa_HGrg8");
+  background-image: url("/assets/images/bg-01.jpg");
   background-position: center center;
   background-size: cover;
+  opacity: .7;
 
   &>p {
     position: relative;
@@ -16,7 +17,8 @@
 }
 
 .about_story {
-  margin-bottom: 50px;
+  background-color: #fff;
+  padding: 50px;
 
   .about_story_block {
     position: relative;
@@ -30,6 +32,7 @@
       background-position: center center;
       width: 60%;
       height: 500px;
+      opacity: 0.6;
     }
 
     .story_block_text {
@@ -38,7 +41,7 @@
       top: 30%;
       width: 60%;
       height: 400px;
-      background-color: #aaabd3d2;
+      background-color: #aaabd3f8;
       padding: 20px;
 
       p {
@@ -50,7 +53,6 @@
 
 .about_info {
   margin-bottom: 50px;
-
   .about_info_block {
 
     .info_card {
