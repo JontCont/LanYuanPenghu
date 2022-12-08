@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { IndexRoutingModule } from './index-routing.module';
-import { HomeComponent } from './home/home/home.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
