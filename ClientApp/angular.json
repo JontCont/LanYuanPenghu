@@ -29,6 +29,7 @@
               "src/google7f152b2fe659b225.html"
             ],
             "styles": [
+              "./node_modules/swiper/swiper-bundle.css",
               "src/styles.scss"
             ],
             "scripts": []

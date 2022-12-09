@@ -1,3 +1,4 @@
+import { CommonUiModule } from './common-ui/common-ui.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,7 +15,8 @@ import { LayoutModule } from "./layout/layout.module";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LayoutModule
+    LayoutModule,
+    CommonUiModule
   ]
 })
 export class AppModule { }
