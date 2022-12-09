@@ -21,9 +21,9 @@
   padding: 20px;
 
   .room_list_block {
-    border: 1px solid #CBA6C3;
+    background-color: #F8FAFF;
     border-radius: 5px;
-    height: 750px;
+    height: 800px;
     position: relative;
     margin-bottom: 25px;
 
@@ -46,11 +46,31 @@
       width: 100%;
       height: 400px;
       overflow: hidden;
+      display: flex;
 
-      >img {
-        display: block;
-        max-width: 100%;
-        height: auto;
+      .room_pic {
+        width: 60%;
+        overflow: hidden;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .room_grid {
+        width: 40%;
+        height: 420px;
+        display: grid;
+        grid-template-columns: [line_1] 50% [line2] 50% [column-3];
+        grid-template-rows: [row-1] 50% [row-2] 50% [row-3];
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
 
@@ -63,5 +83,11 @@
     .room_info {
       padding: 20px;
     }
+  }
+}
+
+.ly_btn {
+  a {
+    color: #F8FAFF;
   }
 }
