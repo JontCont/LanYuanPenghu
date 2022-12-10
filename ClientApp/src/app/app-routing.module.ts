@@ -1,5 +1,3 @@
-import { NewsComponent } from './root/news/news.component';
-import { FrontPageComponent } from './front-page/front-page.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotfoundComponent } from './notfound/notfound.component';
@@ -11,9 +9,9 @@ const routes: Routes = [
   },
   {
     path: 'hotel',
-    loadChildren: () => import('./root/root.module').then(m => m.RootModule)
+    loadChildren: ()=> import('./hotel/hotel.module').then(m=>m.HotelModule)
   },
-  // { path: '', redirectTo: '/front', pathMatch: 'full' },
+  { path: '', redirectTo: '/front', pathMatch: 'full' },
   { path: '**', component: NotfoundComponent },
 ];
 
