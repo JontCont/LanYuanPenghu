@@ -1,11 +1,41 @@
-<div class="page part-1" id="div1">
-    <div class="page__bg--image image"></div>
-    <div class="page__nav">
-        <ul>
-            <li><a routerLink="/hotel/home">進入網站 <span>home</span></a></li>
-            <li><a routerLink="/hotel/news">最新消息 <span>news</span></a></li>
-            <li><a routerLink="/hotel/rooms">房間資訊 <span>rooms</span></a></li>
-            <li><a routerLink="/hotel/about">關於蘭園 <span>about</span></a></li>
-        </ul>
+<div class="container">
+  <div class="front-header front-wrap">
+    <ul class="front-menu">
+      <li class="front-menu_logo"><a [routerLink]="['/home']">
+          <p>蘭園</p>
+        </a></li>
+    </ul>
+  </div>
+
+  <div class="front-bg">
+    <img src="../assets/images/bg.jpg" alt="">
+  </div>
+
+  <div class="front-footer">
+    <div>
+      <a routerLink="/hotel/home">
+        <p>進入網站</p>
+        <p>home</p>
+      </a>
     </div>
+    <div>
+      <a routerLink="/hotel/about">
+        <p>關於蘭園</p>
+        <p>about</p>
+      </a>
+    </div>
+    <div>
+      <a routerLink="/hotel/news">
+        <p>最新消息</p>
+        <p>news</p>
+      </a>
+    </div>
+    <div>
+      <a routerLink="/hotel/rooms">
+        <p>房間資訊</p>
+        <p>rooms</p>
+      </a>
+    </div>
+
+  </div>
 </div>

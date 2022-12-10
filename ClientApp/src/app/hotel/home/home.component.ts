@@ -12,4 +12,13 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  hrefToNews(): void {
+    window.location.href = '/hotel/news';
+
+  }
+  hrefToAbout(): void {
+    window.location.href = '/hotel/about';
+
+  }
+
 }
