@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/lanyuan_angular'),
+      dir: require('path').join(__dirname, './coverage/lan-yuan-penghu'),
       subdir: '.',
       reporters: [
         { type: 'html' },
