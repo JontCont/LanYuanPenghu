@@ -1,0 +1,39 @@
+
+.page{
+    position: relative;
+}
+.page__bg--image{
+    height: 100vh;
+    background-color: rgba(254, 220, 255, 0.219);
+}
+.page__nav{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    ul{
+        display: flex;
+        justify-content: center;
+        li{
+            display: inline-block;
+            font-size: 1.2rem;
+            margin: 25px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            word-wrap: break-word;
+        }
+        a{
+            display: inline-block;
+            padding: 25px 50px;
+        }
+        :hover{
+            cursor: pointer;
+        }
+
+        span{
+            display: block;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+    }
+}

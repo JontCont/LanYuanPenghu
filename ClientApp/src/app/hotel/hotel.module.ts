@@ -1,3 +1,4 @@
+import { HotelComponent } from './hotel.component';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -18,11 +19,14 @@ import { MenuV1Component } from './shared/menu-v1/menu-v1.component';
     NewsComponent,
     AboutComponent,
     RoomsComponent,
-    HomeComponent,
     PhotoComponent,
+    //以下必要存在
+    HotelComponent,
+    HomeComponent,
     HeaderV1Component,
     FooterV1Component,
     MenuV1Component,
+    //以上必要存在
   ],
   imports: [
     CommonModule,
