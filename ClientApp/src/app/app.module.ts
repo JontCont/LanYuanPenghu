@@ -10,6 +10,7 @@ import { HomeComponent } from './root/home/home.component';
 import { NewsComponent } from './root/news/news.component';
 import { PhotoComponent } from './root/photo/photo.component';
 import { RoomsComponent } from './root/rooms/rooms.component';
+import { RootComponent } from './root/root.component';
 import { AboutComponent } from './root/about/about.component';
 
 @NgModule({
@@ -20,7 +21,8 @@ import { AboutComponent } from './root/about/about.component';
     NewsComponent,
     PhotoComponent,
     RoomsComponent,
-    AboutComponent
+    AboutComponent,
+    RootComponent,
   ],
   imports: [
     BrowserModule,
