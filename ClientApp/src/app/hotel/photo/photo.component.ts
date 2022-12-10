@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./photo.component.scss']
 })
 export class PhotoComponent implements OnInit {
+  title :string ="蘭園相簿";
 
   constructor() { }
 
