@@ -12,6 +12,7 @@ const routes: Routes = [
       { path: 'photo', loadChildren: () => import('./photo/photo.module').then(m => m.PhotoModule) },
       { path: 'news', loadChildren: () => import('./news/news.module').then(m => m.NewsModule) },
       { path: 'rooms', loadChildren: () => import('./rooms/rooms.module').then(m => m.RoomsModule) },
+      { path: 'specialty', loadChildren: () => import('./specialty/specialty.module').then(m => m.SpecialtyModule) },
       { path: '', redirectTo: 'home', pathMatch: 'full' }
     ]
   },

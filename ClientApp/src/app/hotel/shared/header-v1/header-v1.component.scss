@@ -5,8 +5,8 @@
 
   .header {
     // position: fixed;
-    padding: 10px 20px 0 20px;
-    background-color: #AAABD3;
+    padding: 0 20px 0 20px;
+    background-color: #e3e3e3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,12 +24,13 @@
 
     .menu_item {
       margin-right: 5px;
+      font-size: 1.2rem;
 
       a {
         padding: 20px 20px;
         text-decoration: none;
         display: block;
-        color: #F8FAFF;
+        color: #111;
         border-bottom: 8px solid transparent;
 
         &:hover {

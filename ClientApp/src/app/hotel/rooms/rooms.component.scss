@@ -1,19 +1,20 @@
 .room_img {
-  height: 500px;
+  height: 300px;
   background-image: url("https://i.picsum.photos/id/445/4256/2819.jpg?hmac=99qT1IPidZrzaXTgG1ixRRVwElWXUlNepU2k692G44c");
   background-position: center center;
   background-size: cover;
+  opacity: .7;
 
   &>p {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
-    color: #F8FAFF;
-    font-size: 28px;
+    font-size: 48px;
     font-weight: bolder;
   }
 }
+
 
 .room_list {
   width: 80%;
@@ -21,7 +22,7 @@
   padding: 20px;
 
   .room_list_block {
-    background-color: #F8FAFF;
+    background-color: #111;
     border-radius: 5px;
     height: 800px;
     position: relative;
@@ -29,7 +30,7 @@
 
     .room_list_text {
       position: absolute;
-      background-color: #F8FAFF;
+      background-color: #111;
       width: 20%;
       box-shadow: 6px 8px 18px 1px #242424;
       -webkit-box-shadow: 6px 8px 18px 1px #242424;
@@ -88,6 +89,6 @@
 
 .ly_btn {
   a {
-    color: #F8FAFF;
+    color: #111;
   }
 }
