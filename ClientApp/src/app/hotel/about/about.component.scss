@@ -47,12 +47,11 @@
     height: 600px;
 
     .story_block_img {
-      background-image: url("https://i.picsum.photos/id/188/2896/1936.jpg?hmac=tKGI_u_jJ-s7wzHbJibhbflqi57bIpH9g7FJXnTfJao");
+      background-image: url("/assets/images/bg-01.jpg");
       background-size: cover;
       background-position: center center;
       width: 60%;
       height: 500px;
-      opacity: 0.6;
     }
 
     .story_block_text {
@@ -61,7 +60,8 @@
       top: 30%;
       width: 60%;
       height: 400px;
-      background-color: #e3e3e3f8;
+      background-color: rgba(85, 85, 85, 0.9);
+      color: #fff;
       padding: 20px;
 
       p {

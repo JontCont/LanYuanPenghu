@@ -22,12 +22,12 @@
   padding: 20px;
 
   .room_list_block {
-    background-color: #111;
+    background-color: #fff;
     border-radius: 5px;
     height: 800px;
     position: relative;
     margin-bottom: 25px;
-
+    border: 1px solid #111;
     .room_list_text {
       position: absolute;
       background-color: #111;
