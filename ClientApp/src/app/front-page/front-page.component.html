@@ -1,17 +1,22 @@
-<div class="container">
-  <div class="front-header front-wrap">
-    <ul class="front-menu">
-      <li class="front-menu_logo"><a [routerLink]="['/home']">
-          <p>蘭園</p>
-        </a></li>
-    </ul>
+<div class="header">
+  <div class="header__body">
+    <div class="header__title">
+      <a routerLink="/hotel/home"><span>澎湖</span>蘭園民宿</a>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="content__body content__body--img">
+    <div class="content__text">
+      <span>WELCOME TO</span>
+      <div class="border-button"></div>
+      <span>THE LAN YUAN B&B</span>
+    </div>
+
   </div>
 
-  <div class="front-bg">
-    <img src="../assets/images/bg.jpg" alt="">
-  </div>
-
-  <div class="front-footer">
+  <div class="content__footer">
     <div>
       <a routerLink="/hotel/home">
         <p>進入網站</p>
@@ -36,6 +41,5 @@
         <p>rooms</p>
       </a>
     </div>
-
   </div>
 </div>
