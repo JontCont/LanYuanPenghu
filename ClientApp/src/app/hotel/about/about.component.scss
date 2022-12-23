@@ -1,23 +1,44 @@
-.about_img {
-  height: 300px;
-  background-image: url("/assets/images/bg-01.jpg");
-  background-position: center center;
-  background-size: cover;
-  opacity: .7;
+.pages{
+  position: relative;
+  height: 450px;
+  .pages__body{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .pages__img {
+    background-image: url("/assets/images/bg-01.jpg");
+    background-position: center center;
+    background-size: cover;
+    .page__body--filter{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(85, 85, 85, 0.35);
+    }
 
-  &>p {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    font-size: 48px;
-    font-weight: bolder;
+    .pages__text{
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      font-size: 48px;
+      font-weight: bolder;
+      color: #fff;
+    }
+    .pages__text--subtext{
+      font-size: 36px;
+    }
   }
 }
 
 .about_story {
   background-color: #fff;
-  padding: 50px;
+  padding: 25px;
 
   .about_story_block {
     position: relative;
@@ -87,42 +108,9 @@
       }
 
       .info_card_text {
-        // border: 1px solid green;
         width: 65%;
         padding: 20px;
       }
     }
   }
-
-  // .about_info_block {
-  //   width: 80%;
-  //   height: 275px;
-  //   margin: 0 auto;
-  //   display: grid;
-  //   grid-gap: 0;
-  //   grid-template-columns:
-  //     [start col-a] 25% [col-b] 25% [col-c] 25% [col-d] 25% [stop end last];
-  //   grid-template-rows:
-  //     [start header] 100% [stop end];
-  // }
-
-  // .grid_odd {
-  //   & div:nth-child(odd) {
-  //     background-color: #CBA6C3;
-  //   }
-
-  //   & div:nth-child(even) {
-  //     background-color: #111;
-  //   }
-  // }
-
-  // .grid_even {
-  //   & div:nth-child(even) {
-  //     background-color: #CBA6C3;
-  //   }
-
-  //   & div:nth-child(odd) {
-  //     background-color: #111;
-  //   }
-  // }
 }
