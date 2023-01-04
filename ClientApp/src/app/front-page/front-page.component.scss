@@ -1,39 +1,98 @@
+.header{
+  background-color: rgba(104, 101, 101, 0.9);
+  a{
+    display: inline-block;
+    text-decoration:none;
+    color: #fff;
+  }
+  .header__title{
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    border-bottom: 8px solid transparent;
 
-.page{
-    position: relative;
-}
-.page__bg--image{
-    height: 100vh;
-    background-color: rgba(254, 220, 255, 0.219);
-}
-.page__nav{
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    ul{
-        display: flex;
-        justify-content: center;
-        li{
-            display: inline-block;
-            font-size: 1.2rem;
-            margin: 25px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            word-wrap: break-word;
-        }
-        a{
-            display: inline-block;
-            padding: 25px 50px;
-        }
-        :hover{
-            cursor: pointer;
-        }
-
-        span{
-            display: block;
-            text-align: center;
-            margin: 10px 0;
-        }
-
+    span{
+      font-size: 1.5rem;
+      border-radius: 5px;
+      border:2px solid rgb(240, 190, 248);
+      padding:0 5px;
+      margin: 0  5px;
+      color: rgb(240, 190, 248);
     }
+  }
+}
+
+
+.content{
+  .content__body{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -999;
+    height: 100vh;
+  }
+
+  .content__body--img
+  {
+    background-image: url("../../assets/images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .content__text{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    background-color: rgba(85, 85, 85, 0.65);
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    span{
+      display: inline-block;
+      color: #fff;
+      font-size: 3rem;
+      padding: 20px;
+    }
+  }
+
+}
+
+.content__footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 75px;
+  display: flex;
+  div {
+    background-color: #353866d3;
+    width: 25%;
+    margin: 0 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: #353866;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 20px;
+      color: #fff;
+      text-align: center;
+    }
+  }
+}
+
+
+
+/*tools*/
+
+.border-button{
+  display: inline-block;
+  width: 100%;
+  border: 2px solid #a4aaff;
 }

@@ -1,25 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400&display=swap');
 /* You can add global styles to this file, and also import other style files */
-body{
-    font-size: 16px;
-    max-width:100%;
-
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.title{
+
+
+
+// append scrollbar style
+* {
+  ::-webkit-scrollbar {
     display: inline-block;
-    width: 30%;
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background-color: rgb(240, 240, 240);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ccc;
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    background-color: #eee;
+  }
+
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
 }
 
-.title-border{
-    border-bottom: 2px solid #ddd ;
-}
-.title-h2{
-    font-size: 2rem;
-    margin: 5px;
-    padding: 10px 20px;
+body {
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+  max-width: 100%;
 }
 
-.clearfix{
-    clear: both ;
+a {
+  text-decoration: none;
 }
 
+li {
+  list-style-type: none;
+}
 
+.title {
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+  color: #353866;
+  font-weight: bolder;
+  margin: 3rem 0;
+}
+
+.ly_btn {
+  background-color: #CBA6C3;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  width: 150px;
+  height: 45px;
+  cursor: pointer;
+
+  &>p {
+    color: #111;
+    font-size: 24px;
+    font-weight: bolder;
+  }
+
+  &:hover {
+    background-color: #353866;
+  }
+}
+
+.text-white {
+  color: #F8FAFF;
+}
+
+.text-default{
+  color: #1e2022;
+}

@@ -12,6 +12,7 @@ import { PhotoComponent } from './photo/photo.component';
 import { HeaderV1Component } from './shared/header-v1/header-v1.component';
 import { FooterV1Component } from './shared/footer-v1/footer-v1.component';
 import { MenuV1Component } from './shared/menu-v1/menu-v1.component';
+import { SpecialtyComponent } from './specialty/specialty.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { MenuV1Component } from './shared/menu-v1/menu-v1.component';
     AboutComponent,
     RoomsComponent,
     PhotoComponent,
+    SpecialtyComponent,
     //以下必要存在
     HotelComponent,
     HomeComponent,
