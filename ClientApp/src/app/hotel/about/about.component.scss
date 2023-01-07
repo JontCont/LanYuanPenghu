@@ -37,7 +37,6 @@
 }
 
 .about_story {
-  background-color: #fff;
   padding: 25px;
 
   .about_story_block {
@@ -72,26 +71,25 @@
 }
 
 .about_info {
-  margin-bottom: 50px;
-
+  background-color: #eee;
+  padding-bottom: 50px;
+  .card_title{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 5px 0;
+  }
   .about_info_block {
 
     .info_card {
       // border: 1px solid blue;
       background-color: #fff;
-      border-radius: 5px;
       display: flex;
       margin: 0 auto 20px auto;
       width: 80%;
       height: 300px;
       padding: 20px;
-      box-shadow: 5px 5px 15px 0px #5C5C5C;
-      -webkit-box-shadow: 5px 5px 15px 0px #5C5C5C;
-      -moz-box-shadow: 5px 5px 15px 0px #5C5C5C;
-      -o-box-shadow: 5px 5px 15px 0px #5C5C5C;
-
+      border: 1px solid #ccc;
       .info_card_img {
-        border-radius: 5px;
         width: 35%;
         min-width: 350px;
         height: 100%;

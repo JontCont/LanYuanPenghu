@@ -37,7 +37,7 @@
 body {
   box-sizing: border-box;
   font-family: "Noto Sans TC", sans-serif;
-  max-width: 100%;
+  // max-width: 100%;
 }
 
 a {
@@ -54,8 +54,13 @@ li {
   font-size: 28px;
   color: #353866;
   font-weight: bolder;
-  margin: 3rem 0;
+  padding: 3rem 0;
 }
+
+.d-inlineblock{
+  display: inline-block;
+}
+
 
 .ly_btn {
   background-color: #CBA6C3;
