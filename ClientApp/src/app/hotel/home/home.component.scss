@@ -97,3 +97,22 @@
   }
 }
 
+
+@media only screen and (max-width: 800px){
+  .map_iframe{
+    width: 100%;
+    overflow: hidden;
+  }
+  .rooms{
+    height :100%;
+    padding-bottom: 20px;
+    .rooms_info{
+      margin-bottom: 20px;
+    }
+  }
+  .rooms .rooms_block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

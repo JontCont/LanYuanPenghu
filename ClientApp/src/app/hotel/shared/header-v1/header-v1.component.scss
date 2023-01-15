@@ -84,4 +84,9 @@
     background-position: center center;
     background-size: cover;
   }
+
+
+  .menu.open .header__title{
+    padding: 0 !important;
+  }
 }

@@ -118,4 +118,14 @@ img{
   .base-foot{
     overflow: hidden;
   }
+  .base-head, .base-foot{
+    width: 100%;
+  }
+  .base-title{
+    font-size: 1.8rem;
+  }
+
+  .base-desc{
+    font-size: 1rem;
+  }
 }
