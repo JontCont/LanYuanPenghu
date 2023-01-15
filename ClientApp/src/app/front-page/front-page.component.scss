@@ -56,7 +56,6 @@
       padding: 20px;
     }
   }
-
 }
 
 .content__footer{
@@ -95,4 +94,14 @@
   display: inline-block;
   width: 100%;
   border: 2px solid #a4aaff;
+}
+
+@media only screen and (max-width: 450px) {
+  .content{
+    .content__text{
+      span{
+        font-size: 1.5rem;
+      }
+    }
+  }
 }

@@ -54,3 +54,34 @@
     }
   }
 }
+
+@media only screen and (max-width: 800px) {
+  ul.menu{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul.menu.open{
+    .menu_logo .header__title a{
+      display: none;
+    }
+  }
+
+  ul.menu.close{
+    .menu_item{
+      display: none;
+    }
+  }
+
+  .header__title > div.menu-icon{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 35px;
+    height: 35px;
+    border: none !important;
+    background-image: url("/assets/icon/menu-icon.png");
+    background-position: center center;
+    background-size: cover;
+  }
+}

@@ -62,25 +62,6 @@ li {
 }
 
 
-.ly_btn {
-  background-color: #CBA6C3;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  width: 150px;
-  height: 45px;
-  cursor: pointer;
-
-  &>p {
-    color: #111;
-    font-size: 24px;
-    font-weight: bolder;
-  }
-
-  &:hover {
-    background-color: #353866;
-  }
-}
 
 .text-white {
   color: #F8FAFF;

@@ -1,12 +1,13 @@
 <div class="header">
   <div class="header__body">
-    <ul class="menu">
+    <ul class="menu {{active}}">
       <li class="menu_item"><a [routerLink]="['/hotel/about']">關於蘭園</a></li>
       <li class="menu_item"><a [routerLink]="['/hotel/rooms']">房型資訊</a></li>
       <!-- <li class="menu_item"><a [routerLink]="['/hotel/news']">最新消息</a></li> -->
       <li class="menu_logo">
         <div class="header__title">
           <a routerLink="/hotel/home"><span>澎湖</span>蘭園民宿</a>
+          <div class="menu-icon" (click)="onMenuClick()"></div>
         </div>
       </li>
       <li class="menu_item"><a [routerLink]="['/hotel/specialty']">蘭園特產</a></li>
