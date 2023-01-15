@@ -50,34 +50,10 @@
   }
 }
 
-.map {
-  height: 600px;
-  margin: 2rem;
-
-  .map_block {
-    display: flex;
-    align-items: center;
-    width: 60%;
-    margin: 3rem auto;
-
-    .map_info {
-      &>p {
-        font-size: 20px;
-        color: #353866;
-        padding-left: 15px;
-      }
-
-      &>h2 {
-        color: #353866;
-        padding-left: 15px;
-      }
-    }
-  }
-}
 
 .rooms {
-  height: 450px;
-
+  height: 530px;
+  background-color: #eee;
   .rooms_block {
     display: flex;
     justify-content: center;
@@ -98,3 +74,26 @@
     }
   }
 }
+
+
+.map {
+  .text-center{
+    text-align: center;
+  }
+  .map__body{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: 50px;
+  }
+  .map_info{
+    font-size: 1.2rem;
+    margin-bottom:25px;
+  }
+
+  .map_iframe{
+    border: 10px solid #ccc;
+    border-radius: 5px;
+  }
+}
+

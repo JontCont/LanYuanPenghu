@@ -1,6 +1,26 @@
 <div class="carousel"></div>
 
 <!-- <app-slides></app-slides> -->
+<div class="info">
+  <div class="info_img1"></div>
+  <div class="info_text">
+    <div class="info_inline">
+      <p>最新消息</p>
+      <button class="btn ly_btn" (click)="hrefToNews()">
+        <p>前往 > </p>
+      </button>
+    </div>
+  </div>
+  <div class="info_text">
+    <div class="info_inline">
+      <p>關於我們</p>
+      <button class="btn ly_btn" (click)="hrefToAbout()">
+        <p>前往 > </p>
+      </button>
+    </div>
+  </div>
+  <div class="info_img2"></div>
+</div>
 
 <div class="rooms">
   <div class="title">房型一覽</div>
@@ -17,43 +37,21 @@
   </div>
 </div>
 
-<div class="info">
-  <div class="info_img1"></div>
-  <div class="info_text">
-    <div class="info_inline">
-      <p>最新消息</p>
-      <button class="ly_btn" (click)="hrefToNews()">
-        <p>前往 > </p>
-      </button>
-    </div>
-  </div>
-  <div class="info_text">
-    <div class="info_inline">
-      <p>關於我們</p>
-      <button class="ly_btn" (click)="hrefToAbout()">
-        <p>前往 > </p>
-      </button>
-    </div>
-  </div>
-  <div class="info_img2"></div>
-</div>
 
 
 <div class="map">
   <div class="title">交通位置</div>
-  <div class="map_block">
-    <div>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14620.363842659546!2d119.5197504!3d23.6369133!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x51decc5f2cc56445!2z6Jit5ZyS5rCR5a6_!5e0!3m2!1szh-TW!2stw!4v1669862115168!5m2!1szh-TW!2stw"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+  <div class="map__body">
     <div class="map_info">
-      <h2>蘭園民宿澎湖縣民宿333號</h2>
-      <br>
       <p>地址：澎湖縣西嶼鄉竹灣村26鄰竹篙灣15之15號</p>
       <p>訂房電話：06-998-1515</p>
       <p>訂房專線：0910-138-879</p>
+    </div>
+    <div class="map_iframe">
+      <iframe class="map_inner"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14620.363842659546!2d119.5197504!3d23.6369133!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x51decc5f2cc56445!2z6Jit5ZyS5rCR5a6_!5e0!3m2!1szh-TW!2stw!4v1669862115168!5m2!1szh-TW!2stw"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </div>

@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   }
 
   hrefToNews(): void {
-    window.location.href = '/hotel/news';
+    window.location.href = 'https://page.line.me/?accountId=346nabfy';
 
   }
   hrefToAbout(): void {
