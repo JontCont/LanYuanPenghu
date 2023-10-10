@@ -8,14 +8,12 @@ import { AppComponent } from './app.component';
 import { ProcessBarModule } from './@Shared/process-bar/process-bar.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainComponent } from './@Views/main/main.component';
-import { HomeComponent } from './@Views/home/home.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         NotfoundComponent,
         MainComponent,
-        HomeComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
