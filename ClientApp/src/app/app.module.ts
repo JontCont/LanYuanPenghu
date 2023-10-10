@@ -6,6 +6,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProcessBarModule } from './@Shared/process-bar/process-bar.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
     declarations: [
@@ -20,6 +21,7 @@ import { ProcessBarModule } from './@Shared/process-bar/process-bar.module';
         HttpClientModule,
         AppRoutingModule,
         ProcessBarModule,
+        NgbModule,
     ]
 })
 export class AppModule { }
