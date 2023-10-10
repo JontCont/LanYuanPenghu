@@ -6,11 +6,14 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProcessBarModule } from './@Shared/process-bar/process-bar.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MainComponent } from './@Views/main/main.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        NotfoundComponent
+        NotfoundComponent,
+        MainComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -20,6 +23,7 @@ import { ProcessBarModule } from './@Shared/process-bar/process-bar.module';
         HttpClientModule,
         AppRoutingModule,
         ProcessBarModule,
+        NgbModule,
     ]
 })
 export class AppModule { }

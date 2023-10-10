@@ -1,26 +1,18 @@
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { ViewsRoutingModule } from './@Views/views-routing.module';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./front-page/front-page.module').then(m => m.FrontPageModule)
+    loadChildren: () => ViewsRoutingModule,
   },
-  {
-    path: 'hotel',
-    loadChildren: ()=> import('./hotel/hotel.module').then(m=>m.HotelModule)
-  },
-  { path: '', redirectTo: '/front', pathMatch: 'full' },
   { path: '**', component: NotfoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule {
-
-
-
- }
+export class AppRoutingModule {}
