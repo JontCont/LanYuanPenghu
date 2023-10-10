@@ -1,31 +1,40 @@
-.header{
-  background-color: rgba(104, 101, 101, 0.9);
-  a{
+$default-color: #ccccff;
+$dark-color: #666;
+
+// 定義變數
+$base-color: #3498db;
+$hover-scale: 1.1;
+
+.header {
+  background-color: #666;
+
+  a {
     display: inline-block;
-    text-decoration:none;
+    text-decoration: none;
     color: #fff;
   }
-  .header__title{
+
+  .header__title {
     font-size: 2rem;
     text-align: center;
-    padding: 10px;
+    padding: 4.333px;
     color: #fff;
-    border-bottom: 8px solid transparent;
+    text-align: center;
 
-    span{
-      font-size: 1.5rem;
+    span {
+      padding: 5px 5px;
+      margin: 0 5px;
+      font-size: 1.2rem;
+      border: 2px solid $default-color;
       border-radius: 5px;
-      border:2px solid rgb(240, 190, 248);
-      padding:0 5px;
-      margin: 0  5px;
-      color: rgb(240, 190, 248);
+      color: $default-color;
     }
   }
 }
 
 
-.content{
-  .content__body{
+.content {
+  .content__body {
     position: fixed;
     top: 0;
     left: 0;
@@ -35,21 +44,22 @@
     height: 100vh;
   }
 
-  .content__body--img
-  {
+  .content__body--img {
     background-image: url("../../../assets/images/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .content__text{
+
+  .content__text {
     position: relative;
     height: 100vh;
     display: flex;
-    background-color: rgba(85, 85, 85, 0.65);
-    flex-direction:column;
+    background-color: rgba(85, 85, 85, 0.35);
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    span{
+
+    span {
       display: inline-block;
       color: #fff;
       font-size: 3rem;
@@ -58,27 +68,32 @@
   }
 }
 
-.content__footer{
+
+.content__footer {
   position: fixed;
+  display: flex;
+  width: 100%;
+  height: 10%;
   left: 0;
   bottom: 0;
-  width: 100%;
-  height: 75px;
-  display: flex;
+
   div {
-    background-color: #353866d3;
+    background-color: $dark-color;
     width: 25%;
-    margin: 0 1px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-right: 2px solid #ccccff;
+    border-left: 2px solid #ccccff;
 
     &:hover {
-      background-color: #353866;
+      background-color: $dark-color;
       cursor: pointer;
     }
 
     p {
+      margin: 0;
+      padding: 0;
       font-size: 20px;
       color: #fff;
       text-align: center;
@@ -86,20 +101,49 @@
   }
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 
 
 /*tools*/
-
-.border-button{
-  display: inline-block;
-  width: 100%;
-  border: 2px solid #a4aaff;
+.border-hidden--left {
+  border-left: none !important;
 }
 
+.border-hidden--right {
+  border-right: none !important;
+}
+.border-hidden {
+  border: none !important;
+}
+
+.border-button {
+  display: inline-block;
+  width: 100%;
+  border: 2px solid $default-color;
+}
+
+// 基本樣式
+.hover-effect {
+  width: 100px;
+  height: 100px;
+  background-color: $base-color;
+  transition: transform 0.3s ease-in-out; // 添加縮放動畫效果
+
+  // 滑鼠懸停時的效果
+  &:hover {
+    transform: scale($hover-scale); // 當懸停時，進行縮放
+  }
+}
+
+
 @media only screen and (max-width: 450px) {
-  .content{
-    .content__text{
-      span{
+  .content {
+    .content__text {
+      span {
         font-size: 1.5rem;
       }
     }
