@@ -7,9 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProcessBarModule } from './@Shared/process-bar/process-bar.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
-import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 @NgModule({
     declarations: [
@@ -25,10 +22,6 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
         AppRoutingModule,
         ProcessBarModule,
         NgbModule,
-        BrowserAnimationsModule,
-        NbThemeModule.forRoot({ name: 'default' }),
-        NbLayoutModule,
-        NbEvaIconsModule,
     ]
 })
 export class AppModule { }
