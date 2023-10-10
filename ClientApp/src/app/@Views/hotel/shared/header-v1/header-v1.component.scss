@@ -1,5 +1,7 @@
+$default-color: #ccccff;
+$dark-color: #353866;
 .header{
-  background-color: rgba(104, 101, 101, 0.9);
+  background-color: $dark-color;
   position: fixed;
   width: 100%;
   z-index: 100000000000;
@@ -22,12 +24,12 @@
     color: #fff;
     margin: 0 20px;
     span{
-      font-size: 1.5rem;
+      padding: 5px 5px;
+      margin: 0 5px;
+      font-size: 1.2rem;
+      border: 2px solid $default-color;
       border-radius: 5px;
-      border:2px solid rgb(240, 190, 248);
-      padding:0 5px;
-      margin: 0  5px;
-      color: rgb(240, 190, 248);
+      color: $default-color;
     }
   }
 

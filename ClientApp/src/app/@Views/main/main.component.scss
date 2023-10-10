@@ -1,13 +1,13 @@
 $default-color: #ccccff;
-$dark-color: #666;
+$dark-color: #353866;
 
 // 定義變數
 $base-color: #3498db;
 $hover-scale: 1.1;
 
 .header {
-  background-color: #666;
-
+  background-color: $dark-color;
+  padding-bottom: 5px;
   a {
     display: inline-block;
     text-decoration: none;
@@ -17,9 +17,9 @@ $hover-scale: 1.1;
   .header__title {
     font-size: 2rem;
     text-align: center;
-    padding: 4.333px;
+    padding: 10px;
     color: #fff;
-    text-align: center;
+    margin: 0 20px;
 
     span {
       padding: 5px 5px;
