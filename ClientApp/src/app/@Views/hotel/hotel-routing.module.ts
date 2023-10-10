@@ -6,25 +6,27 @@ import { PhotoComponent } from './photo/photo.component';
 import { NewsComponent } from './news/news.component';
 import { RoomsComponent } from './rooms/rooms.component';
 import { SpecialtyComponent } from './specialty/specialty.component';
+import { HotelComponent } from './hotel.component';
+import { HotelModule } from './hotel.module';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: HotelComponent,
     children: [
-      { path: 'home', component:HomeComponent },
+      { path: 'home', component: HomeComponent },
       { path: 'about', component: AboutComponent },
-      { path: 'photo', component: PhotoComponent},
+      { path: 'photo', component: PhotoComponent },
       { path: 'news', component: NewsComponent },
       { path: 'rooms', component: RoomsComponent },
-      { path: 'specialty', component:SpecialtyComponent },
-      { path: '', redirectTo: 'home', pathMatch: 'full' }
-    ]
+      { path: 'specialty', component: SpecialtyComponent },
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+    ],
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class HotelRoutingModule { }
+export class HotelRoutingModule {}
